@@ -55,7 +55,7 @@ const InputComponent = React.createClass({
 })
 
 const SecretsBox = React.createClass({
-	_createBlockQuotes: function(arrayOfSecretsObjects){
+	_createJsxBlockQuotes: function(arrayOfSecretsObjects){
 		let jsxArray = arrayOfSecretsObjects.map(function(objSecr){
 			return (
 				<blockquote>
@@ -73,7 +73,7 @@ const SecretsBox = React.createClass({
 		return (
 			<div className="secrets">
 				<h3 className="bg-info" style={{color:'#fff', padding:'10px'}}>Secrets For Real</h3>
-				{this._createBlockQuotes(this.props.secretsList)}
+				{this._createJsxBlockQuotes(this.props.secretsList)}
 			</div>
 		)
 	}
