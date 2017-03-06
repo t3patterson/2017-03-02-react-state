@@ -50,7 +50,7 @@ export const Demo1 = React.createClass({
 })
 
 const ListContainer = React.createClass({
-	_createListItems: function(foodArray){
+	_createListItems: function(foodArray=[]){
 		
 		let component = this
 		let jsxComponents = foodArray.map(function(foodObj, i){
