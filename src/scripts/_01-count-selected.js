@@ -35,11 +35,11 @@ export const Demo1 = React.createClass({
 	
 	render: function(){
 		return (
-			<div className="view_demo3">
+			<div className="view_demo1">
 				<h1>Component 2 Component</h1>
 
 				<ListContainer 
-					userList={this.props.userList}
+					foodList={this.props.foodList}
 					_updateTopLevelCb={this._updateTopLevel}
 				/>
 				<hr/>
@@ -55,7 +55,7 @@ const ListContainer = React.createClass({
 		let component = this
 		let jsxComponents = foodArray.map(function(foodObj, i){
 			return <ListItem key={i} 
-						userData={foodObj} 
+						foodData={foodObj} 
 						_updateTopLevelCb={component.props._updateTopLevelCb} 
 			/>
 		})
